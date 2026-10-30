@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  body { font-family: "Microsoft YaHei", sans-serif; color: #33302b; line-height: 1.75; font-size: 11.5pt; }
+  h1 { font-size: 22pt; margin: 0 0 4px; }
+  .sub { color: #8a847a; font-size: 11pt; margin-bottom: 22px; }
+  h2 { font-size: 15pt; border-left: 5px solid #e8843c; padding-left: 10px; margin: 26px 0 10px; }
+  .stepnum { display: inline-block; background: #e8843c; color: #fff; border-radius: 50%; width: 22px; height: 22px; text-align: center; line-height: 22px; font-size: 12pt; margin-right: 8px; }
+  .box { background: #faf6ef; border: 1px solid #eee4d4; border-radius: 8px; padding: 12px 16px; margin: 10px 0; }
+  .warn { background: #fdf0e4; border: 1px solid #f2d9bd; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 10.5pt; }
+  td, th { border: 1px solid #e2d9c8; padding: 7px 10px; text-align: left; }
+  th { background: #f6f1e8; }
+  ul { padding-left: 22px; }
+  .small { color: #8a847a; font-size: 9.5pt; }
+</style>
+</head>
+<body>
+<h1>🔍 微动放大镜 · 图文说明书</h1>
+<div class="sub">把视频里看不见的微小运动放大到看得见 · v0.1 · 本机生成，无需联网</div>
+
+<h2>它是什么</h2>
+<p>有些运动就在你的视频里，却小到肉眼看不见：音箱唱歌时的外壳振动、吊灯被风推的轻晃、蜡烛火苗的颤动、桌面被楼上装修震动的起伏。这款工具用"运动放大"技术（视频领域称为欧拉运动放大）把这些<b>微小变化放大几十倍</b>，让你直接看见。</p>
+<div class="box">一句话原理：视频里每个像素的亮度随时间起伏。软件把"起伏得刚刚好的那部分"（你选的快慢）挑出来放大，再叠回原画面。静止的东西不动，微动的东西变明显。</div>
+
+<h2>开始前准备</h2>
+<table>
+<tr><th>物品</th><th>说明</th></tr>
+<tr><td>一段固定机位的小视频</td><td>≤15 秒、手机横平竖直拍摄（支持 MP4 / WebM）。<b>机位不能动</b>——手抖拍的视频整幅都在动，放大后全是糊的</td></tr>
+<tr><td>拍摄对象</td><td>振动的东西（音箱、机械）、缓慢晃动的东西（吊灯、植物、窗帘）</td></tr>
+</table>
+
+<h2>三步使用</h2>
+<h3><span class="stepnum">1</span>导入视频</h3>
+<p>点「选择视频文件」。软件按每秒 30 帧抽帧、以 160×120 的工作分辨率分析——足以看清微动，也保证处理速度快。</p>
+<h3><span class="stepnum">2</span>调节放大</h3>
+<p>右边并排显示"原图 vs 放大后"。两个滑块：</p>
+<ul>
+<li><b>运动快慢</b>：你要看的运动有多快？音箱振动选"快"，吊灯摇晃选"慢"。</li>
+<li><b>放大倍数</b>：从 ×2 起步往上加，画面开始发虚就往回退一点。</li>
+</ul>
+<h3><span class="stepnum">3</span>导出</h3>
+<p>点「导出放大后的视频」，得到 WebM 视频文件。导出是实时录制的：5 秒的片段约需 5 秒。导出后可以慢速播放、逐帧观察。</p>
+
+<h2>常见问题</h2>
+<table>
+<tr><th>现象</th><th>原因与办法</th></tr>
+<tr><td>整个画面都在"发光闪烁"</td><td>机位动了或增益太大：重新固定机位拍摄；倍数降到刚好看见为止</td></tr>
+<tr><td>想看的运动没被放大</td><td>"运动快慢"滑块选错了档：振动类用快，摇晃类用慢，各试一遍</td></tr>
+<tr><td>画面出现彩色鬼影</td><td>该区域存在大幅运动（人走过、背景晃动）：裁掉那段或换场景。本工具适合"几乎静止、只有微小运动"的画面</td></tr>
+<tr><td>导出比原视频模糊</td><td>工作分辨率 160×120，输出与之一致。这是速度与效果的平衡，详见下文"它不是什么"</td></tr>
+</table>
+
+<h2>安全提示</h2>
+<div class="box warn">本工具的输出是<b>可视化观察</b>用途：可以让你看见微动、判断振动大概的位置和快慢，但不能当测量仪器用，更不能作为任何设备故障或健康问题的诊断依据。看到异常请用专业设备/专业人士确认。</div>
+
+<h2>它不是什么</h2>
+<ul>
+<li>它不是测量仪器：不输出振幅、频率的精确数值（画面里的"晃动"被放大过，不代表真实位移）。</li>
+<li>它不做医疗观察（比如脉搏）的可靠检测——那类应用请使用专业设备。</li>
+<li>它不修复抖动视频；机位晃动的视频放大后只会更乱。</li>
+<li>输出是 160×120 的 WebM——分辨率是刻意选择的，处理速度和效果的平衡。</li>
+</ul>
+
+<h2>原理（给好奇的人）</h2>
+<p>对视频每个像素，把它的亮度序列做两个不同时间常数的一阶低通滤波，两者相减得到"指定快慢的带通分量"，乘以增益后加回原画面。这利用了视频放大领域的线性近似（欧拉视频放大）思想：小振幅时，亮度变化近似线性，直接放大不会破坏画面结构。增益越大越接近非线性区，所以会有"发虚"的极限。</p>
+<p class="small">微动放大镜 v0.1 · 本说明书由软件内置生成 · 所有处理在本地完成</p>
+</body>
+</html>

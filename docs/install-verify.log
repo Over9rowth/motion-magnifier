@@ -1,0 +1,42 @@
+[check] 复制安装包到 ASCII 路径
+PASS | Setup.exe 可访问 | 154058752 字节
+[check] 静默安装
+PASS | 安装退出码 0 | exit=0
+PASS | 安装目录与 app-0.1.1 存在 | <用户目录>\AppData\Local\MotionMagnifier\app-0.1.1
+PASS | 主程序存在 | 
+PASS | 注册表卸载项唯一 | [{'sub': 'MotionMagnifier', 'DisplayName': '微动放大镜', 'DisplayVersion': '0.1.1', 'Publisher': 'Over9rowth', 'DisplayIcon': '<用户目录>\\AppData\\Local\\MotionMagnifier\\app.ico'}]
+PASS | DisplayVersion = 0.1.1 | 0.1.1
+PASS | Publisher = Over9rowth | Over9rowth
+PASS | 开始菜单快捷方式 | <用户目录>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\微动放大镜.lnk
+PASS | 桌面快捷方式 | <用户目录>\Desktop\微动放大镜.lnk
+[check] 从快捷方式启动并核对窗口标题（码位比对）
+PASS | 窗口标题「微动放大镜」 | FindWindowW=找到 期望码位=['0x5fae', '0x52a8', '0x653e', '0x5927', '0x955c']
+[check] 安装版跑 --smoke
+PASS | 安装版 SMOKE PASS | exit=0 | [smoke] webm ok: <用户目录>\AppData\Local\Temp\motionmagnifier-smoke-1793280907545.webm (16655 字节, EBML 头通过) / [smoke] manual PDF ok: <用户目录>\AppData\Local\Temp\motionmagnifier-smoke-manual-1793280907546.pdf (249995 字节) / SMOKE PASS
+[check] 卸载
+PASS | 卸载退出码 0 | exit=0
+PASS | 注册表卸载项已清除 | 
+PASS | 开始菜单快捷方式已删除 | 
+PASS | 桌面快捷方式已删除 | 
+PASS | 残留仅为 Squirrel 固有项 | ['.dead', 'Update.exe', 'app-0.1.1']
+[check] 残留明细：{'.dead': '-', 'Update.exe': '-', 'app-0.1.1': ['squirrel.exe', 'v8_context_snapshot.bin']}
+
+===== 验收汇总 =====
+PASS | Setup.exe 可访问
+PASS | 安装退出码 0
+PASS | 安装目录与 app-0.1.1 存在
+PASS | 主程序存在
+PASS | 注册表卸载项唯一
+PASS | DisplayVersion = 0.1.1
+PASS | Publisher = Over9rowth
+PASS | 开始菜单快捷方式
+PASS | 桌面快捷方式
+PASS | 窗口标题「微动放大镜」
+PASS | 安装版 SMOKE PASS
+PASS | 卸载退出码 0
+PASS | 注册表卸载项已清除
+PASS | 开始菜单快捷方式已删除
+PASS | 桌面快捷方式已删除
+PASS | 残留仅为 Squirrel 固有项
+
+16/16 项通过

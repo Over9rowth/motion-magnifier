@@ -1,0 +1,102 @@
+{
+  "name": "motion-magnifier",
+  "productName": "微动放大镜",
+  "version": "1.0.0",
+  "private": true,
+  "description": "微动放大镜 — 把视频里肉眼看不见的微小抖动、呼吸起伏和机械共振放大显现出来",
+  "author": "Over9rowth",
+  "license": "GPL-3.0-only",
+  "main": "dist/main/index.cjs",
+  "scripts": {
+    "build": "tsc --noEmit && node scripts/build.mjs",
+    "dev": "npm run build && electron .",
+    "test": "node --test tests/*.test.cjs",
+    "typecheck": "tsc --noEmit",
+    "smoke": "npm run build && node scripts/smoke.mjs",
+    "manual": "npm run build && electron scripts/make-manual-pdf.mjs",
+    "icon": "node scripts/make-icon.mjs",
+    "package": "npm run build && electron-forge package",
+    "make": "npm run build && electron-forge make"
+  },
+  "dependencies": {
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "7.10.2",
+    "@electron-forge/maker-squirrel": "7.10.2",
+    "@electron-forge/maker-zip": "7.10.2",
+    "@types/node": "24.10.1",
+    "@types/react": "19.1.16",
+    "@types/react-dom": "19.1.9",
+    "electron": "44.9.3",
+    "esbuild": "0.25.11",
+    "typescript": "5.9.3"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "asar": false,
+        "name": "MotionMagnifier",
+        "executableName": "MotionMagnifier",
+        "appBundleId": "local.instruments.motionmagnifier",
+        "appCopyright": "Copyright (C) 2026 Over9rowth (GPL-3.0)",
+        "appVersion": "0.1.1",
+        "icon": "resources/icon.ico",
+        "win32metadata": {
+          "CompanyName": "Over9rowth",
+          "FileDescription": "微动放大镜",
+          "ProductName": "微动放大镜",
+          "LegalCopyright": "Copyright (C) 2026 Over9rowth (GPL-3.0)",
+          "InternalName": "MotionMagnifier",
+          "OriginalFilename": "MotionMagnifier.exe"
+        },
+        "ignore": [
+          "^/tests",
+          "^/docs",
+          "^/src",
+          "^/scripts",
+          "^/installer",
+          "^/resources",
+          "^/node_modules",
+          "^/out",
+          "^/out-",
+          "^/project_meta",
+          "^/SPEC\\.md$"
+        ]
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "win32"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "MotionMagnifier",
+            "title": "微动放大镜",
+            "setupIcon": "resources/icon.ico"
+          }
+        }
+      ]
+    }
+  },
+  "keywords": [
+    "electron",
+    "typescript",
+    "react",
+    "desktop-app",
+    "windows-app",
+    "offline-first",
+    "gplv3",
+    "eulerian-video-magnification",
+    "motion-amplification",
+    "computer-vision",
+    "vibration-analysis",
+    "heart-rate-detection",
+    "video-analysis",
+    "signal-processing"
+  ]
+}

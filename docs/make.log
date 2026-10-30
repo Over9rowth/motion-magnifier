@@ -1,0 +1,51 @@
+缓存 zip: <用户目录>\AppData\Local\electron\Cache\04c2354c509017d813b31f104edf339860c2feeb2a3b81fad837a17c0d78d1ac\electron-v44.9.3-win32-x64.zip
+  158,508,870 字节  sha256=41a1ffa0541cb0f2c9b9fe920dd2cef1793ad0ea2ada1a9582958880f4d1b23c
+本地镜像 http://127.0.0.1:52408/
+[33m❯[39m Checking your system
+[33m❯[39m Checking package manager version
+[32m✔[39m Found npm@10.9.2
+[32m✔[39m Checking your system
+[?25h[33m❯[39m Loading configuration
+[32m✔[39m Loading configuration
+[33m❯[39m Resolving make targets
+› Making for the following targets: , 
+[32m✔[39m Resolving make targets
+[33m❯[39m Running package command
+[33m❯[39m Preparing to package application
+[32m✔[39m Preparing to package application
+[33m❯[39m Running packaging hooks
+[33m❯[39m Running generateAssets hook
+[32m✔[39m Running generateAssets hook
+[33m❯[39m Running prePackage hook
+[32m✔[39m Running prePackage hook
+[32m✔[39m Running packaging hooks
+[33m❯[39m Packaging application
+› Determining targets...
+[33m❯[39m Packaging for x64 on win32
+[33m❯[39m Copying files
+[33m❯[39m Preparing native dependencies
+[33m❯[39m Finalizing package
+[mirror] GET /v44.9.3/electron-v44.9.3-win32-x64.zip
+[mirror] GET /v44.9.3/SHASUMS256.txt
+[32m✔[39m Copying files
+[32m✔[39m Preparing native dependencies
+[32m✔[39m Finalizing package
+[32m✔[39m Packaging for x64 on win32
+[32m✔[39m Packaging application
+[33m❯[39m Running postPackage hook
+[32m✔[39m Running postPackage hook
+[32m✔[39m Running package command
+[33m❯[39m Running preMake hook
+[32m✔[39m Running preMake hook
+[33m❯[39m Making distributables
+[33m❯[39m Making a zip distributable for win32/x64
+[33m❯[39m Making a squirrel distributable for win32/x64
+(node:38080) [DEP0147] DeprecationWarning: In future versions of Node.js, fs.rmdir(path, { recursive: true }) will be removed. Use fs.rm(path, { recursive: true }) instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[32m✔[39m Making a zip distributable for win32/x64
+[32m✔[39m Making a squirrel distributable for win32/x64
+[32m✔[39m Making distributables
+[33m❯[39m Running postMake hook
+› Artifacts available at: X:\motion-magnifier\out\make
+[32m✔[39m Running postMake hook
+[?25h

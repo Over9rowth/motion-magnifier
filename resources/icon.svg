@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <rect x="0" y="0" width="256" height="256" rx="56" ry="56" fill="#10151c"/>
+  <!-- 放大镜镜片：青色圆环 -->
+  <circle cx="112" cy="110" r="58" fill="none" stroke="#7fd3c8" stroke-width="15"/>
+  <!-- 手柄：从左下外侧斜出 -->
+  <line x1="155" y1="153" x2="196" y2="194" stroke="#7fd3c8" stroke-width="19" stroke-linecap="round"/>
+  <!-- 镜内被放大的微小振动：琥珀色正弦波（单条，小尺寸下才看得清） -->
+  <path d="M 76 110 q 9 -22 18 0 t 18 0 t 18 0" fill="none" stroke="#ffc861" stroke-width="11" stroke-linecap="round"/>
+</svg>

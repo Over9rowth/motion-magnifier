@@ -1,0 +1,26 @@
+
+> motion-magnifier@0.1.1 smoke
+> npm run build && node scripts/smoke.mjs
+
+
+> motion-magnifier@0.1.1 build
+> tsc --noEmit && node scripts/build.mjs
+
+build ok
+
+[47836:1029/212530.675:INFO:CONSOLE:19225] "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools
+You might need to use a local HTTP server (instead of file://): https://react.dev/link/react-devtools-faq font-weight:bold", source: file:///<工作树>/motion-magnifier/dist/renderer/index.js (19225)
+[smoke] renderer ready, mounted=true engineOk=true
+[47836:1029/212531.447:INFO:CONSOLE:19768] "[smoke] duration0= 2", source: file:///<工作树>/motion-magnifier/dist/renderer/index.js (19768)
+[47836:1029/212532.108:INFO:CONSOLE:2] "%cElectron Security Warning (Insecure Content-Security-Policy) font-weight: bold; This renderer process has either no Content Security
+  Policy set or a policy with "unsafe-eval" enabled. This exposes users of
+  this app to unnecessary security risks.
+
+For more information and help, consult
+https://electronjs.org/docs/tutorial/security.
+This warning will not show up
+once the app is packaged.", source: node:electron/js2c/sandbox_bundle (2)
+[smoke] webm ok: <用户目录>\AppData\Local\Temp\motionmagnifier-smoke-1793280329249.webm (16655 字节, EBML 头通过)
+[smoke] manual PDF ok: <用户目录>\AppData\Local\Temp\motionmagnifier-smoke-manual-1793280329250.pdf (249995 字节)
+SMOKE PASS
+SMOKE PASS
